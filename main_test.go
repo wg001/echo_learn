@@ -4,7 +4,6 @@ import (
 	"testing"
 	"github.com/imroc/req"
 	"github.com/sirupsen/logrus"
-	"fmt"
 )
 
 func Test_Wg(t *testing.T) {
@@ -13,5 +12,4 @@ func Test_Wg(t *testing.T) {
 	if err==nil{
 		logrus.Fatal("error",response)
 	}
-	fmt.Println(response.String())
 }
