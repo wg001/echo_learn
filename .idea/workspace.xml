@@ -2,59 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c00e577-44c0-41f9-9101-e693173fa2bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/doc/README_cn.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/doc/post.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/dump.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/dump_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/req.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/req_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/resp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/resp_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/setting.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/imroc/req/setting_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/alt_exit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/alt_exit_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/entry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/entry_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/examples/basic/basic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/examples/hook/hook.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/exported.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/formatter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/formatter_bench_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hook_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks/syslog/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks/syslog/syslog.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks/syslog/syslog_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks/test/test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/hooks/test/test_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/json_formatter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/json_formatter_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/logger.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/logger_bench_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/logrus.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/logrus_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_appengine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_bsd.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_linux.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_notwindows.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_solaris.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/terminal_windows.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/text_formatter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/text_formatter_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/sirupsen/logrus/writer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.codeclimate.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/License" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/association.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/association_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_create.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_delete.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_query.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_query_preload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_row_query.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_save.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_system_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_update.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callbacks_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/create_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/customize_column_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/delete_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_common.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_postgres.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_sqlite3.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialects/mssql/mssql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialects/mysql/mysql.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialects/postgres/postgres.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialects/sqlite/sqlite.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/embedded_struct_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/errors_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/field.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/field_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/join_table_handler.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/join_table_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/logger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/main_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/migration_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/model_struct.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/multi_primary_keys_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/pointer_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/polymorphic_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/preload_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/query_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/scaner_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/scope.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/scope_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/search.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/search_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/test_all.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/update_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/utils_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/wercker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/inflections.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/inflections_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/wercker.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -81,16 +94,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="decode_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../gopkg.in/yaml.v2/decode_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24216">
-              <caret line="1018" column="5" selection-start-line="1018" selection-start-column="5" selection-end-line="1018" selection-end-column="5" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -109,14 +113,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_test.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_test.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="312">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding>
                 <element signature="e#14#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISSUE_TEMPLATE.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.github/ISSUE_TEMPLATE.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="216">
+                <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -199,7 +215,7 @@
       <path value="$PROJECT_DIR$/vendor/golang.org/x/tools/cmd/heapview/client/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1911" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -230,33 +246,75 @@
             </path>
             <path>
               <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="echo_learn" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.10" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Go SDK 1.10" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gopkg.in" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gopkg.in" type="462c0819:PsiDirectoryNode" />
+              <item name="yaml.v2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="github.com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="echo_learn" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="GOPATH &lt;echo_learn&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="imroc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="echo_learn" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="imroc" type="462c0819:PsiDirectoryNode" />
-              <item name="req" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="echo_learn" type="b2602c69:ProjectViewProjectNode" />
-              <item name="echo_learn" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="imroc" type="462c0819:PsiDirectoryNode" />
-              <item name="req" type="462c0819:PsiDirectoryNode" />
-              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="Sirupsen" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -267,6 +325,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
@@ -354,18 +413,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <frame x="1911" y="-9" width="1938" height="1098" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2413607" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32945284" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.35997853" side_tool="true" weight="0.3073341" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64002144" visible="true" weight="0.30715936" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290993" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64002144" weight="0.30715936" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731758" weight="0.32794458" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49731758" visible="true" weight="0.32794458" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -383,14 +441,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/LogConf.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../gopkg.in/yaml.v2/decode_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24216">
@@ -716,7 +771,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -729,11 +784,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="312">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding>
             <element signature="e#14#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.github/ISSUE_TEMPLATE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
