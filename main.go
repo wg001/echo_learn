@@ -37,7 +37,8 @@ func init() {
 	conf := make(map[string]string)
 
 	yaml.Unmarshal(configpath, &conf)
-	print(conf)
+	fmt.Println(">>>>")
+	fmt.Printf("--%v",conf)
 	//baseLogPath := path.Join(GlobalConfig.LogConf.Logdir,
 	//	GlobalConfig.LogConf.Filename)
 	//writer, err := rotatelogs.New(
