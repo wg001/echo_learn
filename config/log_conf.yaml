@@ -1,0 +1,18 @@
+log:
+  logpath: E:/var/log/go/echo_learn
+  logname: echo_log
+
+redis:
+  host: 127.0.0.1
+  port: 6379
+
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password:
+  database: localstudy
+  charset: utf8
+  parseTime: true
+
+

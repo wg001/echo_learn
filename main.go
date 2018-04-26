@@ -9,6 +9,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
+	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"echo_learn/dto"
 )
 
 func main() {
@@ -27,61 +29,18 @@ func main() {
 	e.Logger.Fatal(e.Start(":1323"))
 }
 
-type config struct{}
-
 func init() {
-	configpath, confErr := ioutil.ReadFile("resource/config.yaml")
-	if confErr != nil {
-		fmt.Printf("err info is %v", confErr)
+	configpath, confErr := ioutil.ReadFile("config/log_conf.yaml")
+	if confErr != nil || len(configpath) == 0 {
+		log.Panicf("err info is %v", confErr)
 	}
-	conf := make(map[string]string)
-
-	yaml.Unmarshal(configpath, &conf)
-	fmt.Println(">>>>")
-	fmt.Printf("--%v",conf)
-	//baseLogPath := path.Join(GlobalConfig.LogConf.Logdir,
-	//	GlobalConfig.LogConf.Filename)
-	//writer, err := rotatelogs.New(
-	//	baseLogPath+".%Y%m%d%H%M",
-	//	rotatelogs.WithLinkName(baseLogPath),      // 生成软链，指向最新日志文件
-	//	rotatelogs.WithMaxAge(7*24*time.Hour),     // 文件最大保存时间
-	//	rotatelogs.WithRotationTime(24*time.Hour), // 日志切割时间间隔
-	//)
-	//if err != nil {
-	//	log.Errorf("config local file system logger error. %v", errors.WithStack(err))
-	//}
-	//
-	////log.SetFormatter(&log.TextFormatter{})
-	//switch level := GlobalConfig.LogConf.LogLevel; level {
-	///*
-	//如果日志级别不是debug就不要打印日志到控制台了
-	// */
-	//case "debug":
-	//	log.SetLevel(log.DebugLevel)
-	//	log.SetOutput(os.Stderr)
-	//case "info":
-	//	setNull()
-	//	log.SetLevel(log.InfoLevel)
-	//case "warn":
-	//	setNull()
-	//	log.SetLevel(log.WarnLevel)
-	//case "error":
-	//	setNull()
-	//	log.SetLevel(log.ErrorLevel)
-	//default:
-	//	setNull()
-	//	log.SetLevel(log.InfoLevel)
-	//}
-	//
-	//lfHook := lfshook.NewHook(lfshook.WriterMap{
-	//	log.DebugLevel: writer, // 为不同级别设置不同的输出目的
-	//	log.InfoLevel:  writer,
-	//	log.WarnLevel:  writer,
-	//	log.ErrorLevel: writer,
-	//	log.FatalLevel: writer,
-	//	log.PanicLevel: writer,
-	//})
-	//log.AddHook(lfHook)
+	conf := dto.GlobalConfig{}
+	yamlError := yaml.Unmarshal(configpath, &conf)
+	if yamlError != nil {
+		log.Debugf("config err")
+		panic(yamlError.Error())
+	}
+	dto.SetGlobalConf(&conf)
 }
 
 // Handler

@@ -1,3 +1,0 @@
-log:
-  logpath: E:/var/log/go/echo_learn
-  logname: echo_log
