@@ -6,11 +6,14 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"fmt"
-	log "github.com/sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"echo_learn/dto"
+	"echo_learn/routers"
+	"github.com/labstack/gommon/log"
+	utils "echo_learn/utils"
 )
 
 func main() {
@@ -20,7 +23,7 @@ func main() {
 	// Middleware
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
-
+	routers.GetRouters(e)
 	// Routes
 	e.GET("/", hello)
 	e.POST("/wg", wg)
@@ -32,7 +35,7 @@ func main() {
 func init() {
 	configpath, confErr := ioutil.ReadFile("config/log_conf.yaml")
 	if confErr != nil || len(configpath) == 0 {
-		log.Panicf("err info is %v", confErr)
+		logrus.Panicf("err info is %v", confErr)
 	}
 	conf := dto.GlobalConfig{}
 	yamlError := yaml.Unmarshal(configpath, &conf)
@@ -40,6 +43,7 @@ func init() {
 		log.Debugf("config err")
 		panic(yamlError.Error())
 	}
+	utils.ConfigLocalFilesystemLogger(conf.Log.LogPath,conf.Log.LogName,600,600)
 	dto.SetGlobalConf(&conf)
 }
 
@@ -49,11 +53,9 @@ func hello(c echo.Context) error {
 }
 
 func wg(c echo.Context) error {
-	log.Info("jskajfdjasldfjsa")
-	c.Logger().Infof("get token is:xx")
 	fmt.Println("hello")
 	header := c.Request().Header
 	token := header.Get("token")
-	c.Logger().Debug("get token is:", token)
+	logrus.Debug("get token is:", token)
 	return nil
 }

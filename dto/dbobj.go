@@ -22,7 +22,7 @@ type DBObj interface {
 
 var DBObjInstance *dbobj
 
-func GetDbStuct() DBObj{
+func GetDbStruct() DBObj{
 	if DBObjInstance==nil{
 		dbDSN := globalConf.Mysql.UserName+":"+globalConf.Mysql.PassWord+"@tcp("+globalConf.Mysql.Host+":"+globalConf.Mysql.Port+")/"+globalConf.Mysql.DataBase+"?charset="+
 			globalConf.Mysql.Charset+"&parseTime="+globalConf.Mysql.ParseTime

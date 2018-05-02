@@ -2,18 +2,18 @@ package dto
 
 import "time"
 
-type user struct {
-	Id         uint
-	UserName   string    `gorm:"user_name"`
-	Email      string    `gorm:"email"`
-	Phone      string    `gorm:"phone"`
-	Address    string    `gorm:"address"`
-	City       string    `gorm:"city"`
-	CreateTime time.Time `gorm:"create_time"`
-	UpdateTime time.Time `gorm:"update_time"`
+type UserORM struct {
+	Id         uint      `json:"id"`
+	UserName   string    `gorm:"column:username" json:"user_name"`
+	Email      string    `json:"email"`
+	Phone      string    `json:"phone"`
+	Address    string    `json:"address"`
+	City       string    `json:"city"`
+	CreateTime time.Time `json:"create_time"`
+	UpdateTime time.Time `json:"update_time"`
 }
 
 type User interface {
-	GetAllUser() []user
-	GetOneUser(condition string) user
+	GetAllUser() []UserORM
+	GetOneUser(condition string) UserORM
 }

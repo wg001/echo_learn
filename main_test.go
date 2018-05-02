@@ -1,4 +1,4 @@
-package main
+package main_test
 
 import (
 	"testing"
@@ -9,6 +9,9 @@ import (
 	"net/http"
 	"os"
 	"echo_learn/dto"
+	"gopkg.in/yaml.v2"
+	"github.com/labstack/gommon/log"
+	"io/ioutil"
 )
 
 type Data struct {
@@ -44,6 +47,24 @@ type Score struct {
 	CourseId     uint
 	Score        uint
 	StudentId    uint
+}
+
+func init() {
+	configpath, confErr := ioutil.ReadFile("config/log_conf.yaml")
+	if confErr != nil || len(configpath) == 0 {
+		log.Panicf("err info is %v", confErr)
+	}
+	conf := dto.GlobalConfig{}
+	yamlError := yaml.Unmarshal(configpath, &conf)
+	if yamlError != nil {
+		log.Debugf("config err")
+		panic(yamlError.Error())
+	}
+	dto.SetGlobalConf(&conf)
+	db := dto.GetDbStuct().GetDBObj()
+	if db == nil{
+		fmt.Println("xxooxl")
+	}
 }
 
 func Test_Wg(t *testing.T) {
