@@ -61,7 +61,7 @@ func init() {
 		panic(yamlError.Error())
 	}
 	dto.SetGlobalConf(&conf)
-	db := dto.GetDbStuct().GetDBObj()
+	db := dto.GetDbStruct().GetDBObj()
 	if db == nil{
 		fmt.Println("xxooxl")
 	}
@@ -69,7 +69,7 @@ func init() {
 
 func Test_Wg(t *testing.T) {
 
-	db := dto.GetDbStuct().GetDBObj()
+	db := dto.GetDbStruct().GetDBObj()
 	if db == nil{
 		fmt.Println("xxooxl")
 	}
