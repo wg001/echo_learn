@@ -2,8 +2,7 @@ package domains_test
 
 import (
 	"testing"
-	//_ ""
-	"echo_learn/dto"
+
 	"echo_learn/domains"
 	"fmt"
 	"echo_learn/utils"
@@ -13,8 +12,10 @@ import (
 const TIME_COMPARE = "2018-05-01 12:10:02"
 
 func TestGetUserInfo(t *testing.T) {
-	db := dto.GetDbStruct().GetDBObj()
-	user:=domains.GetUserInfo(1, db)
+	user,userError:=domains.GetUserInfo(1)
+	if userError!=nil{
+		panic(userError.Error())
+	}
 	if user.UpdateTime.After(user.CreateTime){
 		fmt.Println("ok")
 	}

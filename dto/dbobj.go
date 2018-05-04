@@ -22,19 +22,19 @@ type DBObj interface {
 
 var DBObjInstance *dbobj
 
-func GetDbStruct() DBObj{
+func GetDbStruct() (DBObj,error){
 	if DBObjInstance==nil{
 		dbDSN := globalConf.Mysql.UserName+":"+globalConf.Mysql.PassWord+"@tcp("+globalConf.Mysql.Host+":"+globalConf.Mysql.Port+")/"+globalConf.Mysql.DataBase+"?charset="+
 			globalConf.Mysql.Charset+"&parseTime="+globalConf.Mysql.ParseTime
 		db,err:=gorm.Open("mysql",dbDSN)
 		if err!=nil{
-			log.Fatalf("连接数据库出错:%v",err)
+			return nil,err
 		}
 		DBObjInstance = &dbobj{Initialize:true,DbObject:db}
 		log.Printf("-----%v\n",DBObjInstance)
-		return DBObjInstance
+		return DBObjInstance,nil
 	}
-	return DBObjInstance
+	return DBObjInstance,nil
 }
 
 func (obj *dbobj)GetDBObj() *gorm.DB {

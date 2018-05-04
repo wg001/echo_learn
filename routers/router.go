@@ -7,7 +7,7 @@ import (
 )
 
 func GetRouters(echo *echo.Echo)  {
-	echo.POST("/wg001",wg001)
+	echo.POST("/wg001/:p",wg001)
 	echo.GET("/wg002",controller.Wg002)
 }
 

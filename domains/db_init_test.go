@@ -21,9 +21,12 @@ func init() {
 		panic(yamlError.Error())
 	}
 	dto.SetGlobalConf(&conf)
-	db := dto.GetDbStuct().GetDBObj()
+	db,err := dto.GetDbStruct()
+	if err!=nil{
+
+	}
 	if db == nil{
 		fmt.Println("xxooxl")
 	}
-	db.LogMode(true)
+	db.GetDBObj().LogMode(true)
 }
