@@ -2,9 +2,9 @@ package domains
 
 import (
 	"echo_learn/dto"
-	"github.com/labstack/gommon/log"
 	"echo_learn/utils"
 	"echo_learn/errors"
+	"github.com/sirupsen/logrus"
 )
 
 const TABLE_USER = "user" //用户表
@@ -23,6 +23,6 @@ func GetUserInfo(id uint64) (dto.UserORM, error) {
 		(&userobj).CreateTime = utils.FormatTimeToLocal(userobj.CreateTime)
 		(&userobj).UpdateTime = utils.FormatTimeToLocal(userobj.UpdateTime)
 	}
-	log.Infof("dddddd--%v\n", userobj)
+	logrus.Info("ddddd--%v\n", userobj)
 	return userobj, nil
 }

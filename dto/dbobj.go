@@ -4,6 +4,8 @@ import (
 	"sync"
 	"github.com/jinzhu/gorm"
 	"log"
+	"github.com/sirupsen/logrus"
+	"echo_learn/errors"
 )
 
 type dbobj struct {
@@ -28,7 +30,8 @@ func GetDbStruct() (DBObj,error){
 			globalConf.Mysql.Charset+"&parseTime="+globalConf.Mysql.ParseTime
 		db,err:=gorm.Open("mysql",dbDSN)
 		if err!=nil{
-			return nil,err
+			logrus.Error("数据库链接失败，错误信息：",err.Error())
+			return nil,errors.NewCommonError(errors.ERROR_TYPE_DBCONNECTION,"数据库连接失败啦")
 		}
 		DBObjInstance = &dbobj{Initialize:true,DbObject:db}
 		log.Printf("-----%v\n",DBObjInstance)

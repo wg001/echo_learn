@@ -2,10 +2,9 @@ package main
 
 import (
 	"net/http"
-
+	_ "net/http/pprof"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"fmt"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
@@ -13,7 +12,9 @@ import (
 	"echo_learn/dto"
 	"echo_learn/routers"
 	"github.com/labstack/gommon/log"
-	utils "echo_learn/utils"
+	"echo_learn/utils"
+	"os"
+	"github.com/sevenNt/echo-pprof"
 )
 
 func main() {
@@ -27,7 +28,7 @@ func main() {
 	// Routes
 	e.GET("/", hello)
 	e.POST("/wg", wg)
-
+	echopprof.Wrap(e)
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))
 }
@@ -43,19 +44,21 @@ func init() {
 		log.Debugf("config err")
 		panic(yamlError.Error())
 	}
-	utils.ConfigLocalFilesystemLogger(conf.Log.LogPath,conf.Log.LogName,600,600)
+	logrus.SetOutput(os.Stdout)
+	utils.ConfigLocalFilesystemLogger(conf.Log.LogPath,conf.Log.LogName,7*24*60*60,24*60*60)
 	dto.SetGlobalConf(&conf)
 }
 
 // Handler
 func hello(c echo.Context) error {
+	logrus.Info("get params: ",c.ParamNames())
 	return c.String(http.StatusOK, "Hello, World!Wanggang")
 }
 
 func wg(c echo.Context) error {
-	fmt.Println("hello")
 	header := c.Request().Header
 	token := header.Get("token")
-	logrus.Debug("get token is:", token)
-	return nil
+	logrus.Info("get token is:", token)
+	logrus.Debug("get token is :",token)
+	return c.JSON(http.StatusOK,dto.Response{dto.RIGHT_CODE,"success","token is :"+token})
 }
