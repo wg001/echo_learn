@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"echo_learn/utils"
 	"net/http"
-	"os"
 	"echo_learn/dto"
 	"gopkg.in/yaml.v2"
 	"github.com/labstack/gommon/log"
@@ -61,19 +60,19 @@ func init() {
 		panic(yamlError.Error())
 	}
 	dto.SetGlobalConf(&conf)
-	db := dto.GetDbStruct().GetDBObj()
-	if db == nil{
+	_,err := dto.GetDbStruct()
+	if err != nil{
 		fmt.Println("xxooxl")
 	}
 }
 
 func Test_Wg(t *testing.T) {
-
-	db := dto.GetDbStruct().GetDBObj()
-	if db == nil{
+	dbobj,err := dto.GetDbStruct()
+	if err != nil{
 		fmt.Println("xxooxl")
 	}
 	var result []Score
+	db := dbobj.GetDBObj()
 	db.Raw("select * from score").Scan(&result)
 	//if err1!=nil{
 	//	panic(err1.Error())
@@ -82,7 +81,6 @@ func Test_Wg(t *testing.T) {
 		fmt.Printf("key:%v, value:%v\n",k,v)
 	}
 	//da.Scan(&result)
-	os.Exit(0)
 	req := req.New()
 	response, err := req.Get("http://www.test.com/go.php")
 	if response.Response().StatusCode != http.StatusOK {
@@ -98,7 +96,7 @@ func Test_Wg(t *testing.T) {
 	if errByte != nil {
 		logrus.Fatal("something error")
 	}
-	if checkKey, checkres := utils.CheckParamsExist(resBytes, "code", "msg"); !checkres {
+	if checkKey, checkres := utils.CheckParamsExistInBytes(resBytes, "code", "msg"); !checkres {
 		logrus.Fatalf("key %s not exist", checkKey)
 	}
 	fmt.Println(str)

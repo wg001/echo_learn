@@ -15,12 +15,34 @@ import (
 	"echo_learn/utils"
 	"os"
 	"github.com/sevenNt/echo-pprof"
+	"html/template"
+	"io"
 )
+
+
+// TemplateRenderer is a custom html/template renderer for Echo framework
+type TemplateRenderer struct {
+	templates *template.Template
+}
+
+func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
+
+	// Add global methods if data is a map
+	if viewContext, isMap := data.(map[string]interface{}); isMap {
+		viewContext["reverse"] = c.Echo().Reverse
+	}
+
+	return t.templates.ExecuteTemplate(w, name, data)
+}
+
 
 func main() {
 	// Echo instance
 	e := echo.New()
-	// Middleware
+	renderer := &TemplateRenderer{
+		templates: template.Must(template.ParseGlob("public/views/*.html")),
+	}
+	e.Renderer = renderer
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 	routers.GetRouters(e)

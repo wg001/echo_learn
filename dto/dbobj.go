@@ -5,7 +5,7 @@ import (
 	"github.com/jinzhu/gorm"
 	"log"
 	"github.com/sirupsen/logrus"
-	"echo_learn/errors"
+	"github.com/pkg/errors"
 )
 
 type dbobj struct {
@@ -31,7 +31,7 @@ func GetDbStruct() (DBObj,error){
 		db,err:=gorm.Open("mysql",dbDSN)
 		if err!=nil{
 			logrus.Error("数据库链接失败，错误信息：",err.Error())
-			return nil,errors.NewCommonError(errors.ERROR_TYPE_DBCONNECTION,"数据库连接失败啦")
+			return nil,errors.New("数据库连接失败啦")
 		}
 		DBObjInstance = &dbobj{Initialize:true,DbObject:db}
 		log.Printf("-----%v\n",DBObjInstance)
