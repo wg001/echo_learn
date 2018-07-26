@@ -19,6 +19,7 @@ import (
 	"io"
 )
 
+var templates map[string]*template.Template
 
 // TemplateRenderer is a custom html/template renderer for Echo framework
 type TemplateRenderer struct {
@@ -37,14 +38,16 @@ func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c 
 
 
 func main() {
+	LoadTemplates()
 	// Echo instance
 	e := echo.New()
-	renderer := &TemplateRenderer{
-		templates: template.Must(template.ParseGlob("public/views/*.html")),
-	}
-	e.Renderer = renderer
+	e.Logger.SetLevel(log.DEBUG)
+	t := &Template{}
+	e.Renderer = t
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
+
+	setStaticRoute(e)
 	routers.GetRouters(e)
 	// Routes
 	e.GET("/", hello)

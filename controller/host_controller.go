@@ -1,8 +1,10 @@
 package controller
 
-//
-//func HostPage(c echo.Echo) error {
-//	return c.Renderer.Render(http.StatusOK, "something.html", map[string]interface{}{
-//		"name": "Dolly!"
-//	},c.AcquireContext())
-//}
+import (
+	"github.com/labstack/echo"
+	"net/http"
+)
+
+func HostPage(c echo.Context) error {
+	return c.Render(http.StatusOK, "index",nil)
+}
