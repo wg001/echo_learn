@@ -32,6 +32,10 @@ func Register(c echo.Context) error {
 	return utils.GenResponse(c, dto.RIGHT_CODE, dto.STATUS_RIGHT, register)
 }
 
+func Login(c echo.Context) error{
+	return nil
+}
+
 //func UpdateUser(c echo.Echo) error{
 //
 //}
