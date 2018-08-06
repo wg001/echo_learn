@@ -8,6 +8,7 @@ func FormatTime(time time.Time) string {
 	if time.IsZero(){
 		return ""
 	}
+
 	return time.Format(TIME_FAMMAT)
 }
 

@@ -1,5 +1,5 @@
 log:
-  logpath: E:/var/log/go/echo_learn
+  logpath: /var/log/go/echo_learn
   logname: echo_log
 
 redis:
